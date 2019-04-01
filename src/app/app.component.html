@@ -1,0 +1,63 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+</div>
+<h2>Here are some links to help you start: </h2>
+<ul>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
+  </li>
+  <li>
+    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+  </li></ul>
+-->
+<div class="row" style="text-align:center">
+  <div class = "col-xs-5">
+    <br>
+    <div class="progress">
+      <div class="{{progressBarClass1}}"  id="progress1" [style.width.%]="progressBar1<=100?progressBar1:100">{{progressBar1}}%</div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class = "col-xs-5">
+    <br>
+    <div class="progress">
+      <div class="{{progressBarClass2}}" [style.width.%]="progressBar2<=100?progressBar2:100" id="progress2">{{progressBar2}}%</div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class = "col-xs-5">
+    <br>
+    <div class="progress">
+      <div class="{{progressBarClass3}}" [style.width.%]="progressBar3<=100?progressBar3:100" id="progress3" >{{progressBar3}}%</div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-2">
+    <select id="selectProgressBar" [(ngModel)]="progressBarType">
+        <option value="1" >#Progress1</option>
+        <option value="2">#Progress2</option>
+        <option value="3">#Progress3</option>
+    </select>
+  </div>
+
+  <div class="col-xs-5">
+    <input type="button" name="-25" value="-25" (click)="setProgress(-25);"/>
+    <input type="button" name="-10" value="-10" (click)="setProgress(-10);"/>
+    <input type="button" name="+10" value="+10" (click)="setProgress(10);"/>
+    <input type="button" name="+25" value="+25" (click)="setProgress(25);"/>
+  </div>
+</div>
+
+
